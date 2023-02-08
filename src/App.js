@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,HashRouter } from "react-router-dom";
 import AdminApp from "./AdminApp"
 import UserApp from "./UserApp"
 import "./App.css";
@@ -9,22 +9,22 @@ const App = () => {
   
   return (
     <div >
-      <BrowserRouter>
+      <BrowserRouter basename='/PhotuValaFrontend'>
         <Routes>
 
           {/* Home */}
-          <Route path="/PhotuValaFrontend" element={<AdminLogin />} />
+          <Route path="/" element={<AdminLogin />} />
 
 
           {/* Logins */}
-          <Route path="/PhotuValaFrontend/adminlogin" element={<AdminLogin />} />
-          <Route path="PhotuValaFrontend/userlogin" element={<UserLogin />} />
+          <Route path="/adminlogin" element={<AdminLogin />} />
+          <Route path="/userlogin" element={<UserLogin />} />
 
           {/* Admin  */}
-          <Route path="/PhotuValaFrontend/AdminApp/*" element={<AdminApp />} />
+          <Route path="/AdminApp/*" element={<AdminApp />} />
 
           {/* User  */}
-          <Route path="/PhotuValaFrontend/UserApp/*" element={<UserApp />} />
+          <Route path="/UserApp/*" element={<UserApp />} />
         </Routes>
       </BrowserRouter>
     </div>
