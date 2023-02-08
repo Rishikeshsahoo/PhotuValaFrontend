@@ -13,7 +13,7 @@ const App = () => {
         <Routes>
 
           {/* Home */}
-          <Route path="/" element={<UserLogin />} />
+          <Route path="/PhotuValaFrontend" element={<UserLogin />} />
 
 
           {/* Logins */}
