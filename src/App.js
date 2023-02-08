@@ -13,12 +13,12 @@ const App = () => {
         <Routes>
 
           {/* Home */}
-          <Route path="/PhotuValaFrontend" element={<UserLogin />} />
+          <Route path="/PhotuValaFrontend" element={<AdminLogin />} />
 
 
           {/* Logins */}
           <Route path="/PhotuValaFrontend/adminlogin" element={<AdminLogin />} />
-          <Route path="/userlogin" element={<UserLogin />} />
+          <Route path="PhotuValaFrontend/userlogin" element={<UserLogin />} />
 
           {/* Admin  */}
           <Route path="/PhotuValaFrontend/AdminApp/*" element={<AdminApp />} />
