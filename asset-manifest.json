@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PhotuValaFrontend/static/css/main.c346c48a.css",
-    "main.js": "/PhotuValaFrontend/static/js/main.93b23131.js",
+    "main.js": "/PhotuValaFrontend/static/js/main.d7156536.js",
     "static/media/userImage.png": "/PhotuValaFrontend/static/media/userImage.ddaed77c7fd9ff48eab2.png",
     "static/media/avatar3.png": "/PhotuValaFrontend/static/media/avatar3.013c6cf3e081328c4626.png",
     "static/media/product9.jpg": "/PhotuValaFrontend/static/media/product9.a705203fbf4e55b5deb8.jpg",
@@ -13,10 +13,10 @@
     "static/media/product5.jpg": "/PhotuValaFrontend/static/media/product5.f4c5d8f991b753ca0fcc.jpg",
     "index.html": "/PhotuValaFrontend/index.html",
     "main.c346c48a.css.map": "/PhotuValaFrontend/static/css/main.c346c48a.css.map",
-    "main.93b23131.js.map": "/PhotuValaFrontend/static/js/main.93b23131.js.map"
+    "main.d7156536.js.map": "/PhotuValaFrontend/static/js/main.d7156536.js.map"
   },
   "entrypoints": [
     "static/css/main.c346c48a.css",
-    "static/js/main.93b23131.js"
+    "static/js/main.d7156536.js"
   ]
 }
