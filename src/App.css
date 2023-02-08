@@ -1,0 +1,152 @@
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+
+.sidebar {
+  box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
+}
+.nav-item,
+.navbar {
+  z-index: 10000;
+}
+@media  screen and (max-width:800px) {
+  .sidebar{
+    z-index: 10000000;
+  }
+}
+
+.e-dlg-center-center, .e-quick-popup-wrapper.e-device{
+  z-index: 1000000 !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
+.e-input-group:not(.e-float-icon-left), .e-input-group.e-success:not(.e-float-icon-left), .e-input-group.e-warning:not(.e-float-icon-left), .e-input-group.e-error:not(.e-float-icon-left), .e-input-group.e-control-wrapper:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-success:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-warning:not(.e-float-icon-left), .e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left){
+  border: none;
+}
+.ImageApp {
+  /* min-width: 100vw;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh; */
+  /* background: #feffff; */
+  display: flex;
+  overflow-x: hidden;
+}
+
+
+.main {
+  
+  flex: 1;
+  height: 100%;
+  padding-top: 35px;
+  margin-top: 100px;
+
+}
+
+
+.mainContainer {
+  flex: 1;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-auto-rows: 10px;
+  margin-top: 15px;
+  justify-content: center;
+
+}
+
+.pin {
+  border-radius: 16px;
+  background: #444;
+  margin: 5px;
+  /* cursor: crosshair; */
+  position: relative;
+  overflow: hidden;
+}
+
+.pin .mainPic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pin.small {
+  grid-row-end: span 26;
+}
+.pin.medium {
+  grid-row-end: span 33;
+}
+.pin.large {
+  grid-row-end: span 45;
+}
+
+.pin .content {
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pin:hover .content {
+  bottom: 0;
+  transition: bottom 0.3s;
+  padding: 0px 15px;
+}
+
+.pin:hover .content h3 {
+  color: #feffff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.pin .search {
+  background: #fb3874;
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    padding: 0 20px;
+  }
+
+  .menuContainer {
+    padding: 30px 0px;
+    left: 15px;
+    width: unset;
+  }
+
+ 
+}
+.dnd-text
+{
+    display:flex;
+    justify-content: center;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+.UserCard:hover{
+    transform: translateY(-8px);
+}
+
+.CardContent {
+    
+    color: white;
+   
+}
