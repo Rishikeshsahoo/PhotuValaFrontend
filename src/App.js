@@ -9,7 +9,7 @@ const App = () => {
   
   return (
     <div >
-      <BrowserRouter basename='/PhotuValaFrontend'>
+      <HashRouter>
         <Routes>
 
           {/* Home */}
@@ -26,7 +26,7 @@ const App = () => {
           {/* User  */}
           <Route path="/UserApp/*" element={<UserApp />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
