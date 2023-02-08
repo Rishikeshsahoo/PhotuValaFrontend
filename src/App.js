@@ -17,14 +17,14 @@ const App = () => {
 
 
           {/* Logins */}
-          <Route path="/adminlogin" element={<AdminLogin />} />
+          <Route path="/PhotuValaFrontend/adminlogin" element={<AdminLogin />} />
           <Route path="/userlogin" element={<UserLogin />} />
 
           {/* Admin  */}
-          <Route path="/AdminApp/*" element={<AdminApp />} />
+          <Route path="/PhotuValaFrontend/AdminApp/*" element={<AdminApp />} />
 
           {/* User  */}
-          <Route path="/UserApp/*" element={<UserApp />} />
+          <Route path="/PhotuValaFrontend/UserApp/*" element={<UserApp />} />
         </Routes>
       </BrowserRouter>
     </div>
