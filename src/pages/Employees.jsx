@@ -12,7 +12,7 @@ const Employees = () => {
   const {users,toggle,setToggle}=useStateContext();
   const handleChange=(e,username)=>{
     const token = localStorage.getItem("adminToken");
-   axios.post("http://localhost:4000/admin/changeactivestatus",{username:username,activeStatus:e.target.checked},
+   axios.post("https://photuvalatestingserver.onrender.com/admin/changeactivestatus",{username:username,activeStatus:e.target.checked},
    {
     headers: { Authorization: token }
    })

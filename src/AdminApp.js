@@ -55,7 +55,7 @@ const App = () => {
   React.useEffect(() => {
     const token = localStorage.getItem("adminToken");
     axios
-      .get("http://localhost:4000/admin/admindashboard", {
+      .get("https://photuvalatestingserver.onrender.com/admin/admindashboard", {
         headers: { Authorization: token },
       })
       .then((res) => {

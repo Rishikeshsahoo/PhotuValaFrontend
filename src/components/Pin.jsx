@@ -9,7 +9,7 @@ const handleDelete = async (img, username, setToggle) => {
 
   try {
     await axios.post(
-      "http://localhost:4000/admin/deleteimage",
+      "https://photuvalatestingserver.onrender.com/admin/deleteimage",
       { idr: img._id, username: username },
       {
         headers: { Authorization: token },
@@ -27,7 +27,7 @@ const handleView=(setShow)=>{
 export const handleShortlist=(img,setToggle)=>{
   const token = localStorage.getItem("token");
 
-  axios.post("http://localhost:4000/users/addimagestofolder/",{folder:[img]},{
+  axios.post("https://photuvalatestingserver.onrender.com/users/addimagestofolder/",{folder:[img]},{
     headers: { Authorization: token },
   })
   .then((res)=>{if(res.data.success)setToggle((prev)=>!prev)})
@@ -37,7 +37,7 @@ export const handleShortlist=(img,setToggle)=>{
 const handleRemove=(image,setToggle)=>{
   const token = localStorage.getItem("token");
   // console.log("hi")
-  axios.post("http://localhost:4000/users/removeimage/",{image:image},{
+  axios.post("https://photuvalatestingserver.onrender.com/users/removeimage/",{image:image},{
     headers: { Authorization: token },
   })
   .then((res)=>{if(res.data.success)setToggle((prev)=>!prev)})
@@ -47,7 +47,7 @@ const handleRemove=(image,setToggle)=>{
 const handleEdited=(image,setToggle)=>{
   const token = localStorage.getItem("token");
   // console.log("hi")
-  axios.post("http://localhost:4000/users/removeedited/",{folder:[image]},{
+  axios.post("https://photuvalatestingserver.onrender.com/users/removeedited/",{folder:[image]},{
     headers: { Authorization: token },
   })
   .then((res)=>{if(res.data.success)setToggle((prev)=>!prev)})

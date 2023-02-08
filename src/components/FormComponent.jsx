@@ -42,7 +42,7 @@ export default function FormComponent({ username,path }) {
               try{
 
               const data = await axios.post(
-                `http://localhost:4000/admin/${path_main}`,
+                `https://photuvalatestingserver.onrender.com/admin/${path_main}`,
                 { username: username, files: arr }
                 
               );

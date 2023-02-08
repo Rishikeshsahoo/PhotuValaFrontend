@@ -44,7 +44,7 @@ export default function Login() {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:4000/users/protected", {
+      .get("https://photuvalatestingserver.onrender.com/users/protected", {
         headers: { Authorization: token },
       })
       .then((res) => {
@@ -63,7 +63,7 @@ export default function Login() {
     const password = data.get("password");
 
     axios
-      .post("http://localhost:4000/users/login", {
+      .post("https://photuvalatestingserver.onrender.com/users/login", {
         username: username,
         password: password,
       })
