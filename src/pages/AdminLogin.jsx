@@ -107,7 +107,7 @@ export default function AdminLogin() {
             width:180,
             margin:3
             }}
-            alt="Your logo."
+            alt="Your logos"
             src={Logo}
         />
         
