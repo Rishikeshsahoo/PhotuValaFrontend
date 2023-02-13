@@ -13,6 +13,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Alert, Collapse, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+import Logo from "../../data/Logo.png"
 
 function Copyright(props) {
   return (
@@ -23,9 +24,9 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
+      
+        PhotuVala
+      {" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
@@ -130,7 +131,7 @@ export default function Login() {
                   margin: 3,
                 }}
                 alt="Your logo."
-                src="assets/logo.png"
+                src={Logo}
               />
               <Typography component="h1" variant="h5">
                 Sign in
