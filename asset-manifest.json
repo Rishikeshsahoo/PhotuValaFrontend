@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PhotuValaFrontend/static/css/main.c346c48a.css",
-    "main.js": "/PhotuValaFrontend/static/js/main.9865c0fb.js",
+    "main.css": "/PhotuValaFrontend/static/css/main.c79d3679.css",
+    "main.js": "/PhotuValaFrontend/static/js/main.9cdf5535.js",
     "static/media/userImage.png": "/PhotuValaFrontend/static/media/userImage.ddaed77c7fd9ff48eab2.png",
     "static/media/avatar3.png": "/PhotuValaFrontend/static/media/avatar3.013c6cf3e081328c4626.png",
     "static/media/product9.jpg": "/PhotuValaFrontend/static/media/product9.a705203fbf4e55b5deb8.jpg",
@@ -12,11 +12,11 @@
     "static/media/avatar4.jpg": "/PhotuValaFrontend/static/media/avatar4.f56b774f77caaf2f6921.jpg",
     "static/media/product5.jpg": "/PhotuValaFrontend/static/media/product5.f4c5d8f991b753ca0fcc.jpg",
     "index.html": "/PhotuValaFrontend/index.html",
-    "main.c346c48a.css.map": "/PhotuValaFrontend/static/css/main.c346c48a.css.map",
-    "main.9865c0fb.js.map": "/PhotuValaFrontend/static/js/main.9865c0fb.js.map"
+    "main.c79d3679.css.map": "/PhotuValaFrontend/static/css/main.c79d3679.css.map",
+    "main.9cdf5535.js.map": "/PhotuValaFrontend/static/js/main.9cdf5535.js.map"
   },
   "entrypoints": [
-    "static/css/main.c346c48a.css",
-    "static/js/main.9865c0fb.js"
+    "static/css/main.c79d3679.css",
+    "static/js/main.9cdf5535.js"
   ]
 }
