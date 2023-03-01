@@ -2,15 +2,13 @@ import React from 'react'
 import ClientImageModal from './Client/ClientImageModal'
 import Pin from "./Pin"
 export default function ImageApp({Data,base ,dest,username}) {
-    console.log("dataa",Data)
     const sizes=["small","medium","large"]
     const [show,setShow]=React.useState(false)
-    const [image,setImage]=React.useState(null)
-
+    const [index,setIndex]=React.useState(0)
 
   return (
     <div className="ImageApp">
-      <ClientImageModal image={image} show={show} setShow={setShow}/>
+      <ClientImageModal Data={Data} index={index} setIndex={setIndex} show={show} setShow={setShow}/>
       <div className="main">
         
 
@@ -21,12 +19,13 @@ export default function ImageApp({Data,base ,dest,username}) {
                 base={base}
                 dest={dest}
                 key={idx}
+                idx={idx}
                 pinSize={sizes[idx%3]}
                 imgSrc={data.url}
                 img={data}
                 username={username}
                 setShow={setShow}
-                setImage={setImage}
+                setIndex={setIndex}
               />
             ))}
         </div>

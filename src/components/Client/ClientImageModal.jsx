@@ -19,12 +19,11 @@ const style = {
   borderRadius:"10px"
 };
 
-export default function BasicModal({show,setShow,image}) {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setShow(true);
+export default function BasicModal({index,show,setShow,Data,setIndex}) {
   const handleClose = () => setShow(false);
   const {setToggle}=useStateContext();
-  console.log(image)
+  console.log("re rendered",index)
+
   return (
     <div>
       <Modal
@@ -35,14 +34,16 @@ export default function BasicModal({show,setShow,image}) {
       >
         <Box sx={style}>
           <div className='flex flex-row w-100 justify-center' >
-            <img style={{width:"500px",height:"500px" ,objectFit:"contain"}} src={(image && image.url!==null)?image.url:""}/>
+            <img style={{width:"500px",height:"500px" ,objectFit:"contain"}} src={(Data[index] && Data[index].url!==null)?Data[index].url:""}/>
           </div>
           <br/>
           <div className='w-100 flex justify-center'>
-          <button style={{background:"green"}} className='py-2 px-3 text-md text-white rounded-xl' onClick={()=>handleShortlist(image,setToggle)}>Add to shortlisted</button>
+          <button style={{background:"green"}} className='py-2 px-3 text-md text-white rounded-xl' onClick={()=>handleShortlist(Data[index],setToggle)}>Add to shortlisted</button>
 
           <button style={{background:"blue"}} className='py-2 px-3 text-md ml-3 text-white rounded-xl' onClick={()=>setShow(false)}>Close</button>
           </div>
+        <button style={{background:"blue"}}  onClick={()=>{setIndex(prev=>prev-1)}}>Prev</button>
+        <button  style={{background:"green"}}  onClick={()=>{setIndex(prev=>prev+1)}}>Next</button>
 
 
         </Box>

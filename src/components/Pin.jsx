@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "@mui/material";
 import axios from "axios";
 import { useStateContext } from "../contexts/ContextProvider";
-import ClientImageModal from "./Client/ClientImageModal"
 
 const handleDelete = async (img, username, setToggle) => {
   const token = localStorage.getItem("adminToken");
@@ -54,7 +53,7 @@ const handleEdited=(image,setToggle)=>{
   .catch((err)=>{console.log(err)})
 }
 
-function Pin({ pinSize, imgSrc, img, base, dest, username,setShow ,setImage}) {
+function Pin({ pinSize, imgSrc, img, base, dest, username,setShow ,idx,setIndex}) {
   const { setToggle } = useStateContext();
   const handleButton = (base, dest) => {
     if (base === "Admin") {
@@ -119,7 +118,9 @@ function Pin({ pinSize, imgSrc, img, base, dest, username,setShow ,setImage}) {
   const handleClickPin=()=>{
     if(base!=="User" || dest!=="All") return;
     setShow(true)
-    setImage(img)
+    // setImage(key)
+    console.log("key",idx)
+    setIndex(idx)
   }
   return (
     <>
