@@ -42,10 +42,10 @@ export default function BasicModal({index,show,setShow,Data,setIndex}) {
 
           <button style={{background:"blue"}} className='py-2 px-3 text-md ml-3 text-white rounded-xl' onClick={()=>setShow(false)}>Close</button>
           </div>
-        <button style={{background:"blue"}}  onClick={()=>{setIndex(prev=>prev-1)}}>Prev</button>
-        <button  style={{background:"green"}}  onClick={()=>{setIndex(prev=>prev+1)}}>Next</button>
-
-
+          <div >
+          <button class="buttons back" onClick={()=>{setIndex(prev=>prev-1)}} ></button>
+          <button class="buttons next" onClick={()=>{setIndex(prev=>prev+1)}}></button>
+          </div>
         </Box>
 
       </Modal>
