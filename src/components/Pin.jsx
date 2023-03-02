@@ -2,6 +2,8 @@ import React from "react";
 import { Button } from "@mui/material";
 import axios from "axios";
 import { useStateContext } from "../contexts/ContextProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const handleDelete = async (img, username, setToggle) => {
   const token = localStorage.getItem("adminToken");
@@ -29,13 +31,13 @@ export const handleShortlist=(img,setToggle)=>{
   axios.post("https://photuvalatestingserver.onrender.com/users/addimagestofolder/",{folder:[img]},{
     headers: { Authorization: token },
   })
-  .then((res)=>{if(res.data.success)setToggle((prev)=>!prev)})
+  .then((res)=>{if(res.data.success)setToggle((prev)=>!prev); toast("Image Shortlisted")})
   .catch((err)=>{console.log(err)})
 }
 
 const handleRemove=(image,setToggle)=>{
   const token = localStorage.getItem("token");
-  // console.log("hi")
+  console.log("image",image)
   axios.post("https://photuvalatestingserver.onrender.com/users/removeimage/",{image:image},{
     headers: { Authorization: token },
   })
@@ -74,15 +76,7 @@ function Pin({ pinSize, imgSrc, img, base, dest, username,setShow ,idx,setIndex}
       }
     } else {
       if (dest === "All") {
-        return (
-          <button
-            style={{ background: "green" }}
-            className="text-white py-2 px-3 capitalize rounded-xl text-md"
-            onClick={()=>handleView(setShow)}
-          >
-            View
-          </button>
-        );
+        return;
       } 
       else if(dest==="Select")
       {
@@ -116,7 +110,7 @@ function Pin({ pinSize, imgSrc, img, base, dest, username,setShow ,idx,setIndex}
     }
   };
   const handleClickPin=()=>{
-    if(base!=="User" || dest!=="All") return;
+    if(base!=="User" ) return;
     setShow(true)
     // setImage(key)
     console.log("key",idx)
@@ -124,13 +118,14 @@ function Pin({ pinSize, imgSrc, img, base, dest, username,setShow ,idx,setIndex}
   }
   return (
     <>
-    <div style={(base==="User" && dest==="All")?{cursor:"pointer"}:{cursor:"auto"}} className={`pin ${pinSize}`} onClick={handleClickPin}>
+    <div style={(base==="User")?{cursor:"pointer"}:{cursor:"auto"}} className={`pin ${pinSize}`} onClick={handleClickPin}>
 
       <img src={imgSrc} alt="" className="mainPic" />
 
-      {!(base==="User" &&  dest==="All") &&
+      {!(base==="User" ) &&
         <div className="content">{handleButton(base, dest)}</div>}
     </div>
+   
     </>
   );
 }

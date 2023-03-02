@@ -20,6 +20,7 @@
     "@syncfusion/ej2-react-schedule": "^19.4.50",
     "axios": "^1.2.2",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
     "formik": "^2.2.9",
     "material-icons": "^1.13.1",
     "react": "^17.0.2",
@@ -30,6 +31,7 @@
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-toastify": "^9.1.1",
     "yup": "^0.32.11"
   },
   "scripts": {

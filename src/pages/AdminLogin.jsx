@@ -128,6 +128,8 @@ export default function AdminLogin() {
                 label="Username"
                 name="username"
                 autoComplete="username"
+                size="small"
+
                 autoFocus
               />
               <TextField
@@ -138,12 +140,13 @@ export default function AdminLogin() {
                 label="Password" 
                 type="password"
                 id="password"
+                size="small"
+
                 autoComplete="current-password"
               />
 
               <Button
                 type="submit"
-                fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 , backgroundColor:"#0d9aae"}}
               >

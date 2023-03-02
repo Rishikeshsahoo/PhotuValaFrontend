@@ -151,6 +151,7 @@ export default function Login() {
                   name="username"
                   autoComplete="username"
                   autoFocus
+                  size="small"
                 />
                 <TextField
                   margin="normal"
@@ -161,11 +162,14 @@ export default function Login() {
                   type="password"
                   id="password"
                   autoComplete="current-password"
+                  size="small"
+
+                  
                 />
 
                 <Button
                   type="submit"
-                  fullWidth
+                  
                   variant="contained"
                   sx={{ mt: 3, mb: 2, backgroundColor: "#0d9aae" }}
                 >

@@ -173,18 +173,7 @@ export const userLinks = [
         icon: <FiUsers />,
       }
     ],
-  },
-
-  
-  {
-    title: 'Applications',
-    links: [
-      {
-        name: 'Shortlist New Images',
-        icon: <FiUsers />,
-      }
-    ],
-  },
+  }
 
 ];
 

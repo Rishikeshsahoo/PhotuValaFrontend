@@ -5,6 +5,6 @@ import { useStateContext } from "../contexts/ContextProvider";
 export default function Shortlisted() {
     const {currentUser}=useStateContext()
   return (
-    <ImageApp base="User" dest="Short" Data={currentUser.shortlisted} />
+    <ImageApp base="User" dest="Short" Data={(currentUser.shortlisted)?currentUser.shortlisted:[]} />
   )
 }

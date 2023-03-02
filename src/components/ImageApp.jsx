@@ -8,7 +8,7 @@ export default function ImageApp({Data,base ,dest,username}) {
 
   return (
     <div className="ImageApp">
-      <ClientImageModal Data={Data} index={index} setIndex={setIndex} show={show} setShow={setShow}/>
+      <ClientImageModal base={base} dest={dest} Data={Data} index={index} setIndex={setIndex} show={show} setShow={setShow}/>
       <div className="main">
         
 
