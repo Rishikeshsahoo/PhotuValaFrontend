@@ -11,7 +11,7 @@ export default function UploadFile() {
     const navigate=useNavigate()
     useEffect(()=>{
         const token=localStorage.getItem('adminToken')
-        axios.get("https://photuvalatestingserver.onrender.com/admin/protected",{headers:{Authorization:token}})
+        axios.get(`${process.env.REACT_APP_LOCALHOST}/admin/protected`,{headers:{Authorization:token}})
         .then((res)=>{
             setLoggedIn(1)
             setUsername(location.state)

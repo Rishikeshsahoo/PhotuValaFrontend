@@ -37,7 +37,7 @@ export default function AdminLogin() {
 
     const adminToken= localStorage.getItem('adminToken')
 
-    axios.get('https://photuvalatestingserver.onrender.com/admin/protected',{headers:{Authorization:adminToken}})
+    axios.get(`${process.env.REACT_APP_LOCALHOST}/admin/protected`,{headers:{Authorization:adminToken}})
     .then((res)=>{
         navigate('/AdminApp/')
     })
@@ -57,7 +57,7 @@ export default function AdminLogin() {
     const password = data.get("password");
 
     axios
-      .post("https://photuvalatestingserver.onrender.com/admin/login", {
+      .post(`${process.env.REACT_APP_LOCALHOST}/admin/login`, {
         username: username,
         password: password,
       })

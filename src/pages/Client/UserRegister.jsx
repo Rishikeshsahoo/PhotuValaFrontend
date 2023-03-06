@@ -28,7 +28,7 @@ export default function UserRegister() {
     });
     const token=localStorage.getItem("adminToken")
     if(data.get('password')===data.get('repassword')){
-        axios.post("https://photuvalatestingserver.onrender.com/admin/registeruser",{username:data.get('username'),password:data.get('password')},{headers:{Authorization:token}})
+        axios.post(`${process.env.REACT_APP_LOCALHOST}/admin/registeruser`,{username:data.get('username'),password:data.get('password')},{headers:{Authorization:token}})
         .then(()=>{  setToggle(prev=>{return (prev+1)%2});navigate('/AdminApp')})
         .catch(()=>{})
     }

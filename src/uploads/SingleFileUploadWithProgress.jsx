@@ -25,7 +25,7 @@ export default function SingleFileUploadWithProgress({
 }
 
 async function uploadFile(file, setProgress) {
-  let url2 = await axios.get("https://photuvalatestingserver.onrender.com/admin/getUrl");
+  let url2 = await axios.get(`${process.env.REACT_APP_LOCALHOST}/admin/getUrl`);
   console.log(url2.data);
   url2 = url2.data;
 

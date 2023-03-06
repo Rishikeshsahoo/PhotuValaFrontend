@@ -34,15 +34,15 @@ export default function FormComponent({ username,path }) {
               files: array(object({ url: string().required() })),
             })}
             onSubmit={async (value) => {
-                // console.log("working ")
+                console.log("working ",value)
               const arr = value.files.map((it) => {
-                return { url: it.url };
+                return { url: it.url, fileName:it.file.path };
               });
 
               try{
 
               const data = await axios.post(
-                `https://photuvalatestingserver.onrender.com/admin/${path_main}`,
+                `${process.env.REACT_APP_LOCALHOST}/admin/${path_main}`,
                 { username: username, files: arr }
                 
               );

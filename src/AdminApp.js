@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import {
-  BrowserRouter,
   Routes,
   Route,
-  NavLink,
   useNavigate,
   Navigate,
 } from "react-router-dom";
@@ -55,7 +53,7 @@ const App = () => {
   React.useEffect(() => {
     const token = localStorage.getItem("adminToken");
     axios
-      .get("https://photuvalatestingserver.onrender.com/admin/admindashboard", {
+      .get(`${process.env.REACT_APP_LOCALHOST}/admin/admindashboard`, {
         headers: { Authorization: token },
       })
       .then((res) => {

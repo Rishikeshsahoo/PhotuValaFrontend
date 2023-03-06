@@ -28,7 +28,7 @@ export default function ChangePassword() {
         });
         const token=localStorage.getItem("adminToken")
         if(data.get('password')===data.get('repassword')){
-            axios.post("https://photuvalatestingserver.onrender.com/admin/changepassword",{username:location.state,password:data.get('password')},{headers:{Authorization:token}})
+            axios.post(`${process.env.REACT_APP_LOCALHOST}/admin/changepassword`,{username:location.state,password:data.get('password')},{headers:{Authorization:token}})
             .then(()=>{console.log("newww");navigate('/AdminApp/Users')})
             .catch(()=>{})
         }

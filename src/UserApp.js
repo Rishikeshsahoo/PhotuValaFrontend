@@ -53,7 +53,7 @@ const App = () => {
     const token = localStorage.getItem("token");
     console.log(token)
     axios
-      .get("https://photuvalatestingserver.onrender.com/users/getprotectedimages", {
+      .get(`${process.env.REACT_APP_LOCALHOST}/users/getprotectedimages`, {
         headers: { Authorization: token },
       })
       .then((res) => {

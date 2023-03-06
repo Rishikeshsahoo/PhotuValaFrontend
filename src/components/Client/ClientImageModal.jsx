@@ -8,6 +8,7 @@ import left from "../../data/arrow-left-circle-fill.svg";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Typography } from "@mui/material";
 
 const style = {
   position: "absolute",
@@ -19,6 +20,7 @@ const style = {
   boxShadow: 24,
   p: 4,
   borderRadius: "10px",
+ 
 };
 
 export default function BasicModal({
@@ -40,7 +42,7 @@ export default function BasicModal({
     console.log("image", image);
     axios
       .post(
-        "https://photuvalatestingserver.onrender.com/users/removeimage/",
+        `${process.env.REACT_APP_LOCALHOST}/users/removeimage/`,
         { image: image },
         {
           headers: { Authorization: token },
@@ -64,6 +66,8 @@ export default function BasicModal({
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+        <Typography sx={{ textAlign:"center"}} variant="h6" component="h6"> {Data[index] && Data[index].fileName !== null ? Data[index].fileName : ""}</Typography>
+
           <div className="flex flex-row w-100 justify-center">
             <img
               style={{ width: "500px", height: "500px", objectFit: "contain" }}

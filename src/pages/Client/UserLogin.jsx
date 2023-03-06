@@ -45,7 +45,7 @@ export default function Login() {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("https://photuvalatestingserver.onrender.com/users/protected", {
+      .get(`${process.env.REACT_APP_LOCALHOST}/users/protected`, {
         headers: { Authorization: token },
       })
       .then((res) => {
@@ -64,7 +64,7 @@ export default function Login() {
     const password = data.get("password");
 
     axios
-      .post("https://photuvalatestingserver.onrender.com/users/login", {
+      .post(`${process.env.REACT_APP_LOCALHOST}/users/login`, {
         username: username,
         password: password,
       })
