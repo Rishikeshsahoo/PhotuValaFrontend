@@ -31,18 +31,42 @@ export default function BasicModal({
   setShow,
   Data,
   setIndex,
+  username
 }) {
   const handleClose = () => setShow(false);
   const { setToggle, currentUser } = useStateContext();
-  console.log("curre", currentUser);
-  console.log("re rendered", index);
+  console.log("curre", username);
+  console.log("re rendered", ((dest)));
+
+
+  const handleAdminRemove = (image, setToggle) => {
+    const token = localStorage.getItem("adminToken");
+    console.log("image");
+    axios
+      .post(
+        `${process.env.REACT_APP_LOCALHOST}/admin/deleteimage/`,
+        { idr: image._id, username: username },
+        {
+          headers: { Authorization: token },
+        }
+      )
+      .then((res) => {
+        if (res.data.success) setToggle((prev) => !prev);
+        setShow(false);
+        toast(`Image Deleted!`)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
 
   const handleRemove = (image, setToggle) => {
     const token = localStorage.getItem("token");
     console.log("image", image);
     axios
       .post(
-        `${process.env.REACT_APP_LOCALHOST}/users/removeimage/`,
+        `${process.env.REACT_APP_LOCALHOST}/users/${( dest=="Short")?"removeimage":"removeedited"}/`,
         { image: image },
         {
           headers: { Authorization: token },
@@ -51,12 +75,13 @@ export default function BasicModal({
       .then((res) => {
         if (res.data.success) setToggle((prev) => !prev);
         setShow(false);
-        toast("Image Removed from Shortlisted!")
+        toast(`Image Removed from ${(dest==="Short")?"Shortlisted":"Edited"}!`)
       })
       .catch((err) => {
         console.log(err);
       });
   };
+
   return (
     <div>
       <Modal
@@ -107,7 +132,7 @@ export default function BasicModal({
               <button
                 style={{ background: "green" }}
                 className="py-2 px-3 text-md text-white rounded-xl"
-                onClick={() => handleRemove(Data[index], setToggle)}
+                onClick={() => (base!=="Admin")?handleRemove(Data[index], setToggle):handleAdminRemove(Data[index],setToggle)}
               >
                 Remove
               </button>

@@ -22,9 +22,7 @@ const handleDelete = async (img, username, setToggle) => {
   }
 };
 
-const handleView=(setShow)=>{
-  setShow(true)
-}
+
 export const handleShortlist=(img,setToggle)=>{
   const token = localStorage.getItem("token");
 
@@ -101,7 +99,7 @@ function Pin({ pinSize, imgSrc, img, base, dest, username,setShow ,idx,setIndex}
               console.log("img",img)
             }}
           >
-            hmm
+            
           </button>
       }
       else {
@@ -110,7 +108,6 @@ function Pin({ pinSize, imgSrc, img, base, dest, username,setShow ,idx,setIndex}
     }
   };
   const handleClickPin=()=>{
-    if(base!=="User" ) return;
     setShow(true)
     // setImage(key)
     console.log("key",idx)
@@ -118,12 +115,10 @@ function Pin({ pinSize, imgSrc, img, base, dest, username,setShow ,idx,setIndex}
   }
   return (
     <>
-    <div style={(base==="User")?{cursor:"pointer"}:{cursor:"auto"}} className={`pin ${pinSize}`} onClick={handleClickPin}>
+    <div style={{cursor:"pointer"}} className={`pin ${pinSize}`} onClick={handleClickPin}>
 
       <img src={imgSrc} alt="" className="mainPic" />
 
-      {!(base==="User" ) &&
-        <div className="content">{handleButton(base, dest)}</div>}
     </div>
    
     </>

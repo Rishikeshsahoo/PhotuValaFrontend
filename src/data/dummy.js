@@ -171,6 +171,10 @@ export const userLinks = [
       {
         name: 'Shortlisted Images',
         icon: <FiUsers />,
+      },
+      {
+        name: 'Edited',
+        icon: <FiUsers />,
       }
     ],
   }
