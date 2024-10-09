@@ -63,21 +63,3 @@ export default function UserCard2({ userdata }) {
   );
 }
 
-{
-  /* <CardContent>
-       
-         
-       <Typography variant="h5" component="div">
-         {userdata.username}
-       </Typography>
-      
-       <Typography variant="body2">
-         Total Images: {userdata.files.length}
-         <br />
-         Shortlisted Images: {userdata.shortlisted.length} 
-       </Typography>
-     </CardContent>
-     <CardActions style={{display:"flex", flexDirection:"row", justifyContent:"center",margin:"2%"}} >
-       <Button variant="contained" sx={{backgroundColor:"#0D4C92", color:"#fff"}} onClick={()=>{navigate('/adminuser',{state:userdata.username})}} size="small"><VisibilityIcon/> View Profile</Button>
-     </CardActions> */
-}
