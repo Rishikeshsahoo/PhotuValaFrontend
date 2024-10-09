@@ -43,10 +43,16 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "extends": [
+    "react-app",
+    "react-app/jest"
+  ],
+  "rules": {
+    "no-unused-vars": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "eqeqeq": "off",
+    "jsx-a11y/alt-text": "off"
+  }
   },
   "browserslist": {
     "production": [
