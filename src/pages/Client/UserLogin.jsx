@@ -134,7 +134,7 @@ export default function Login() {
                 src={Logo}
               />
               <Typography component="h1" variant="h5">
-                Sign in
+                Sign into world of pics
               </Typography>
               <Box
                 component="form"
