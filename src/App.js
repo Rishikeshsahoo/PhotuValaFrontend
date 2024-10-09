@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route,HashRouter } from "react-router-dom";
+import React from "react";
+import {  Routes, Route,HashRouter } from "react-router-dom";
 import AdminApp from "./AdminApp"
 import UserApp from "./UserApp"
 import "./App.css";
